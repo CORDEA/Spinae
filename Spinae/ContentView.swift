@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    let viewModel = MainViewModel()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button("Start", action: viewModel.onStartTapped)
+                .padding()
     }
 }
 
