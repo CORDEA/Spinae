@@ -6,10 +6,35 @@
 //
 
 import SwiftUI
+import SystemExtensions
 
-class MainViewModel: ObservableObject {
+class MainViewModel: NSObject, ObservableObject {
 
-    func onStartTapped() {
+  func onStartTapped() {
 
-    }
+  }
+}
+
+extension MainViewModel: OSSystemExtensionRequestDelegate {
+  func request(
+    _ request: OSSystemExtensionRequest,
+    actionForReplacingExtension existing: OSSystemExtensionProperties,
+    withExtension ext: OSSystemExtensionProperties
+  ) -> OSSystemExtensionRequest.ReplacementAction {
+    return .replace
+  }
+
+  func requestNeedsUserApproval(_ request: OSSystemExtensionRequest) {
+
+  }
+
+  func request(
+    _ request: OSSystemExtensionRequest, didFinishWithResult result: OSSystemExtensionRequest.Result
+  ) {
+
+  }
+
+  func request(_ request: OSSystemExtensionRequest, didFailWithError error: Error) {
+
+  }
 }
