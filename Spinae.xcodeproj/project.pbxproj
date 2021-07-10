@@ -13,7 +13,35 @@
 		4690706E2699608F00984A24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4690706D2699608F00984A24 /* Preview Assets.xcassets */; };
 		46907078269961DB00984A24 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 46907077269961DB00984A24 /* RxCocoa */; };
 		4690707A269961DB00984A24 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 46907079269961DB00984A24 /* RxSwift */; };
+		469070822699621100984A24 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469070812699621100984A24 /* NetworkExtension.framework */; };
+		469070852699621100984A24 /* FilterDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469070842699621100984A24 /* FilterDataProvider.swift */; };
+		469070872699621100984A24 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469070862699621100984A24 /* main.swift */; };
+		4690708C2699621100984A24 /* jp.cordea.Spinae.SpinaeExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 4690707F2699621100984A24 /* jp.cordea.Spinae.SpinaeExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4690708A2699621100984A24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4690705B2699608D00984A24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4690707E2699621100984A24;
+			remoteInfo = SpinaeExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		469070902699621200984A24 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				4690708C2699621100984A24 /* jp.cordea.Spinae.SpinaeExtension.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		469070632699608D00984A24 /* Spinae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spinae.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +51,12 @@
 		4690706D2699608F00984A24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4690706F2699608F00984A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469070702699608F00984A24 /* Spinae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spinae.entitlements; sourceTree = "<group>"; };
+		4690707F2699621100984A24 /* jp.cordea.Spinae.SpinaeExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = jp.cordea.Spinae.SpinaeExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		469070812699621100984A24 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		469070842699621100984A24 /* FilterDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDataProvider.swift; sourceTree = "<group>"; };
+		469070862699621100984A24 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		469070882699621100984A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469070892699621100984A24 /* SpinaeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpinaeExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +69,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4690707C2699621100984A24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469070822699621100984A24 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				469070652699608D00984A24 /* Spinae */,
+				469070832699621100984A24 /* SpinaeExtension */,
+				469070802699621100984A24 /* Frameworks */,
 				469070642699608D00984A24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				469070632699608D00984A24 /* Spinae.app */,
+				4690707F2699621100984A24 /* jp.cordea.Spinae.SpinaeExtension.systemextension */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +120,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		469070802699621100984A24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				469070812699621100984A24 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		469070832699621100984A24 /* SpinaeExtension */ = {
+			isa = PBXGroup;
+			children = (
+				469070842699621100984A24 /* FilterDataProvider.swift */,
+				469070862699621100984A24 /* main.swift */,
+				469070882699621100984A24 /* Info.plist */,
+				469070892699621100984A24 /* SpinaeExtension.entitlements */,
+			);
+			path = SpinaeExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,10 +149,12 @@
 				4690705F2699608D00984A24 /* Sources */,
 				469070602699608D00984A24 /* Frameworks */,
 				469070612699608D00984A24 /* Resources */,
+				469070902699621200984A24 /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4690708B2699621100984A24 /* PBXTargetDependency */,
 			);
 			name = Spinae;
 			packageProductDependencies = (
@@ -98,6 +164,23 @@
 			productName = Spinae;
 			productReference = 469070632699608D00984A24 /* Spinae.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4690707E2699621100984A24 /* SpinaeExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4690708D2699621200984A24 /* Build configuration list for PBXNativeTarget "SpinaeExtension" */;
+			buildPhases = (
+				4690707B2699621100984A24 /* Sources */,
+				4690707C2699621100984A24 /* Frameworks */,
+				4690707D2699621100984A24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpinaeExtension;
+			productName = SpinaeExtension;
+			productReference = 4690707F2699621100984A24 /* jp.cordea.Spinae.SpinaeExtension.systemextension */;
+			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +192,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					469070622699608D00984A24 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					4690707E2699621100984A24 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -130,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				469070622699608D00984A24 /* Spinae */,
+				4690707E2699621100984A24 /* SpinaeExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -141,6 +228,13 @@
 			files = (
 				4690706E2699608F00984A24 /* Preview Assets.xcassets in Resources */,
 				4690706B2699608F00984A24 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4690707D2699621100984A24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +250,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4690707B2699621100984A24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469070872699621100984A24 /* main.swift in Sources */,
+				469070852699621100984A24 /* FilterDataProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4690708B2699621100984A24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4690707E2699621100984A24 /* SpinaeExtension */;
+			targetProxy = 4690708A2699621100984A24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		469070712699608F00984A24 /* Debug */ = {
@@ -277,6 +388,7 @@
 		469070742699608F00984A24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Spinae/Spinae.entitlements;
@@ -299,6 +411,7 @@
 		469070752699608F00984A24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Spinae/Spinae.entitlements;
@@ -314,6 +427,44 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.cordea.Spinae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4690708E2699621200984A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpinaeExtension/SpinaeExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpinaeExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.cordea.Spinae.SpinaeExtension;
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4690708F2699621200984A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpinaeExtension/SpinaeExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpinaeExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.cordea.Spinae.SpinaeExtension;
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -335,6 +486,15 @@
 			buildConfigurations = (
 				469070742699608F00984A24 /* Debug */,
 				469070752699608F00984A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4690708D2699621200984A24 /* Build configuration list for PBXNativeTarget "SpinaeExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4690708E2699621200984A24 /* Debug */,
+				4690708F2699621200984A24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
